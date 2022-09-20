@@ -1,0 +1,85 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background-color: hsl(217, 54%, 11%);
+    font-family: 'Outfit', sans-serif;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hsl(216, 50%, 16%);
+    border: none;
+    border-radius: 1em;
+    width: clamp(20rem, calc(20rem + 2vw), 22rem);
+    overflow: hidden;
+    box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+    height: 34rem;
+    margin: 10px;
+    padding: 10px;
+}
+
+.card-header{
+    margin: 10px;
+    justify-content: center;
+}
+
+
+.header-img{
+    border-radius: 1.25rem;
+    /* margin: 1.25rem; */
+    padding: 0.625rem;
+    max-width: 20rem;
+}
+
+.header-img img{
+    width: 100%;
+}
+
+h1{
+    color: hsl(0, 0%, 100%);
+}
+
+p{
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+}
+
+.numbers{
+    color: hsl(178, 100%, 50%);
+    text-transform: uppercase;
+}
+
+.avatar img{
+    width: 3rem;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
